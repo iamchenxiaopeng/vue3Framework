@@ -1,11 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import routers from './routers'
+import routes from './routers'
 import iView from 'iview'
 
-Vue.use(Router)
 const router = new Router({
-  routers
+  routes
 })
 router.beforeEach((to, from, next) => {
   iView.LoadingBar.start()
@@ -16,4 +15,5 @@ router.afterEach(to => {
   window.scrollTo(0, 0)
   iView.LoadingBar.finish()
 })
+Vue.use(Router)
 export default router

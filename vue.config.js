@@ -6,7 +6,7 @@ const resolve = dir => {
 
 // 项目部署基础
 const BASE_URL = process.env.NODE_ENV === 'production'
-  ? '/web/px'
+  ? '/dist'
   : '/'
 
 module.exports = {

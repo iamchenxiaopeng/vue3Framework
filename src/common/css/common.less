@@ -1,0 +1,338 @@
+@small-font: 12px;
+@normal-font: 14px;
+@middle-font: 18px;
+@defaultcolor: #515A6E;
+@primarycolor: #2d8cf0;
+
+
+body, div, span, ul, dl, dt, dd, li, a, textarea, button, input, select  {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-style: normal;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-family: '宋体';
+    -webkit-tap-highlight-color:transparent;
+    &:focus {
+        outline: none;
+    }
+}
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    height: 100%;
+    width: 100%;
+    color: @defaultcolor;
+    //根据需要
+    min-width: 1280px;
+}
+.fullbox-min-width {
+    min-width: 1080px;
+}
+.normalfont {
+    font-size: @normal-font;
+    color: @defaultcolor;
+}
+.leftborder {
+    border-left: 5px solid @defaultcolor;
+}
+// 自定义默认radio样式
+// .radio-default {
+//     // border: 1px dashed #C9C9C9;
+//     // padding: 0 5px;
+//     // box-shadow: 0 0 1px 1px #999999;
+// }
+//可编辑表单的添加按钮,icon的size为30
+.table-add-icon {
+    color: #57A3F3;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+}
+
+//更改iview内置样式
+.ivu-input[disabled],.ivu-select-input[disabled],.ivu-select-disabled .ivu-select-selection {
+    color: #888;
+}
+// 内置loading
+.demo-spin-icon-load {
+    animation: ani-demo-spin 1s linear infinite;
+}
+// 内置loading背景更改
+.ivu-spin-fullscreen {
+    background-color: rgba(0, 21, 41, .3);
+}
+// 增加Card默认背景
+.ivu-card-body {
+    // background-color: #ECF0F5;
+}
+// 没有padding的Card
+.no-padding-card .ivu-card-body {
+    padding: 0;
+}
+// 费用录入的客户选择框字体颜色
+.form-top .change-blue,.form-top .color-change-input .ivu-input[disabled]{
+    color: #2D8CF0;
+    font-weight: bold;
+}
+// 更改被选中按钮的样式
+.ivu-page-item-active {
+    background: #2d8cf0!important;
+}
+.ivu-page-item-active a {
+    color: #fff!important;
+}
+// 去掉表单禁用状态的样式
+.ivu-select-disabled .ivu-select-selection,.ivu-input[disabled] {
+    // background-color: #fff;
+    border: none;
+    border-bottom: 1px solid #DCDEE2;
+}
+// 斑马线表格
+.ivu-table-stripe .ivu-table-body tr:nth-child(2n) td, .ivu-table-stripe .ivu-table-fixed-body tr:nth-child(2n) td {
+    background-color: #F6FAFF;
+}
+// 点击选择高亮表格
+.ivu-table-row-highlight td {
+    border-top: 1px dashed red;
+    border-bottom: 1px dashed red;
+}
+// .ivu-table-stripe .ivu-table-body tr:nth-child(2n) td .ivu-table-cell div button, .ivu-table-stripe .ivu-table-fixed-body tr:nth-child(2n) td .ivu-table-cell div button {
+//     background-color: #F6FAFF;
+// }
+// iview 高亮表格
+.ivu-table .demo-table-error-row td{
+    background-color: #ff6600;
+    color: #fff;
+}
+// iview弹窗关闭按钮
+.ivu-modal-close {
+    background: #FF4040!important;
+    border-radius: 50%!important;
+    right: 16px!important;
+    top: 16px!important;
+}
+.ivu-modal-close .ivu-icon-ios-close {
+    color: #fff!important;
+    font-size: 22px!important;
+}
+// 更改表头样式
+.lack-table .ivu-table .ivu-table-header th {
+    background-color: #FFC9C9!important;
+    color: #C13E3E;
+    font-weight: 500;
+}
+.lack-table .ivu-table .ivu-table-header th td{
+    border-right: none!important;
+}
+.enough-table .ivu-table .ivu-table-header th {
+    background-color: #ADEDB0!important;
+    color: #0A9010;
+    font-weight: 500;
+}
+.enough-table .ivu-table .ivu-table-header th td{
+    border-right: none!important;
+}
+
+//常用
+    .pointer {
+        cursor: pointer;
+    }
+    .bold {
+        font-weight: bold!important;
+    }
+    .min-width {
+        min-width: 1000px;
+    }
+    .center-text {
+        text-align: center;
+    }
+    .left-text {
+        text-align: left;
+    }
+    .normal-shadow {
+        box-shadow: 0 0 2px 1px #999999;
+    }
+    .small-borderradius {
+        border-radius: 5px 5px;
+    }
+    .normal-borderradius {
+        border-radius: 10px 10px;
+    }
+
+    .clear:after{
+        content: '';
+        height: 0;
+        visibility: hidden;
+        display: block;
+        clear: both;
+    }
+
+    .clear{
+        zoom:1;
+    }
+    .full-line {
+        width: 100%;
+    }
+
+    // 字体底部显示
+    .font-bottom {
+        display: table-cell;
+        vertical-align: bottom;
+    }
+
+    //组件宽高100%，父组件给子组件个有宽度的容器
+    .components-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    //fixed布局
+    .fixed-container {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    //未知尺寸图片自动填满div（宽或高100%），父元素必须相对定位：position:relative;
+    .auto-img {
+        position: absolute;
+        max-width: 100%;
+        max-height: 100%;
+        margin: auto;
+        top: -9999px;
+        right: -9999px;
+        bottom: -9999px;
+        left: -9999px;
+    }
+
+    /* 文字不能被选择 */
+    .cannotselect {
+        -webkit-user-select:none;
+
+    -moz-user-select:none;
+
+    -ms-user-select:none;
+
+    user-select:none;
+    }
+
+    // 单行文本溢出隐藏
+    .hidetext {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    //多3行文本溢出隐藏
+    .hidetests {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+    }
+
+    .full-block {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .hide{
+        display: none;
+    }
+
+    .show{
+        display: block;
+    }
+
+// margin
+    .small-margin {
+        margin: 10px;
+    }
+    .normal-margin {
+        margin: 20px;
+    }
+    .small-margin-col {
+        margin: 10px auto;
+    }
+    .normal-margin-col {
+        margin: 20px auto;
+    }
+    .small-margin-row {
+        margin: 0 10px;
+    }
+    .normal-margin-row {
+        margin: 0 20px;
+    }
+    .center-margin {
+        margin: 0 auto;
+    }
+// flex布局
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    //竖直方向
+    .col-flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+//flex子元素居中
+    .flex-center {
+        display: flex;
+        justify-content: center;
+    }
+    .flex-center-wrap {
+        .flex-center();
+        flex-wrap: wrap;
+    }
+    .flex-around {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .flex-left {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+// 常用动画 
+    .show-anime {
+        animation: normalshow .5s;
+    }
+    @keyframes normalshow {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+    //从右边出来
+    .show-from-right-anime {
+        animation: rightshow .5s;
+    }
+    @keyframes rightshow {
+        0% {
+            opacity: 0;
+            transform: translateX(3000px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }

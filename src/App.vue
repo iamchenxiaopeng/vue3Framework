@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <div id="nav">
+      <a @click="changeLang">切换语言</a>
+      <h2>{{$t('lang')}}</h2>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
@@ -10,7 +12,13 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  methods: {
+    changeLang(){
+      this.$i18n.locale = this.$i18n.locale==='zh-CN'?'en-US':'zh-CN'
+      localStorage.setItem('targetLang', this.$i18n.locale)
+    }
+  }
 }
 </script>
 

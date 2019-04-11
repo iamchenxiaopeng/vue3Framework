@@ -20,6 +20,7 @@ module.exports = {
     'eqeqeq': 'off',//关闭全等检查
     "object-curly-spacing": 'off',
     "padded-blocks": 'off',
+    "eol-last": 'off'
   },
   parserOptions: {
     parser: 'babel-eslint'

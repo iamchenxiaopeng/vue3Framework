@@ -8,6 +8,7 @@
     "dev": "vue-cli-service serve"
   },
   "dependencies": {
+    "adaptive.js": "0.0.2",
     "axios": "^0.18.0",
     "echarts": "^4.2.1",
     "iview": "^3.2.2",

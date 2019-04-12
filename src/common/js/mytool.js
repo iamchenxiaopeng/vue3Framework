@@ -51,6 +51,25 @@ export const checkScaleValue = () => {
 
   return ratio
 }
+// 获取当前页面url上的参数
+export const GetUrlParam = (paraName) => {
+  var url = window.location.href
+  var arrObj = url.split('?')
+
+  if (arrObj.length > 1) {
+    var arrPara = arrObj[1].split('&')
+    var arr
+    for (var i = 0; i < arrPara.length; i++) {
+      arr = arrPara[i].split('=')
+      if (arr != null && arr[0] == paraName) {
+        return arr[1]
+      }
+    }
+    return ''
+  } else {
+    return ''
+  }
+}
 // 处理类名
 const dealClass = {}
 dealClass.addClass = (DOM, DOMclass) => {
